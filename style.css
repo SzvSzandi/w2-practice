@@ -24,10 +24,10 @@ button {
 }
 button {
     position: absolute; /* taking the element out of th rendering flow */
-    top: 50%; /* placing the element that much away from the top edge of the viewpont */
+    top: 50%; /* placing the element that much away from the top edge of the viewport */
     left: 50%;
 
-    transform: translate(-50%, -50%); /* moves away the element that much from themself */
+    transform: translate(-50%, -50%); /* moves away the element that much from itself */
 }
 
 span {
