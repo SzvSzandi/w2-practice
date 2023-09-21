@@ -1,63 +1,38 @@
-/*  let array = ["alma", 12, false, undefined, null]
-
-console.log(array) */
-
-/* let stringArray = ["Imola Ács", "Pali Herrer", "Nagy Zsombor"]
-
-console.log(stringArray)
-
-console.log(stringArray[0]) */
-
-/* let myObj = {
-    key1: "value1",
-    key2: "value2",
-    key3: "value3",
-    key4: 15,
-    key5: 600,
-    key6: true,
-    key7: ["Imola Ács", "Pali Herrer", "Nagy Zsombor"]
+function negativeOrPositive(number) {
+    if (number < 0) {
+        return "negative"
+    } else if (number > 0) {
+        return "positive"
+    } else {
+        return "zero"
+    }
 }
 
-console.log(myObj.key7[2]) */
+function logger(text) {
+    console.log(text)
+}
 
-let myFacebook = {
-    name: "Szvatkó Alexandra",
-    age: 30,
-    location: "Budaörs",
-    friends: [
-        "Gipsz Jakab",
-        "John Doe",
-        "Példa Péter"
-    ],
-    favouriteMovies: [
-    {
-        title: "Harry Potter",
-        year: 2001,
-        characters: [
-            "Harry Potter",
-            "Ronald Weasly",
-            "Hedvig"
-        ]
-    },
-    {
-       title: "Ananász Expressz",
-       year: 2012,
-       characters: [ 
-        "Seth Rogen",
-        "James Franco"
-    ]
-    },
-    {
-        title: "Üvegtigris",
-        year: 2004,
-        characters: [
-            "Csoki",
-            "Gaben",
-            "Lali"
-        ]
-    },
-], 
+/* logger(negativeOrPositive(0)) */
 
-};
+function decideIfBeerIsGood(beer) {
+    if (beer.price < 340 && beer.abv > 4.7) {
+        return beer.name + ": jó sör mert olcsó és üt"
+    } else if (beer.price < 340) {
+        return beer.name + ": jó sör, mert olcsó"
+    } else if (beer.abv > 4.7) { 
+        return beer.name + ": jó sör mert üt"
+    } else {
+        return beer.name + ": nem jó"
+    }
+}
 
-console.log(myFacebook.favouriteMovies[0].characters[1])
+let dreher = { name: "Dreher", price: 349, abv: 5}
+let soproni = { name: "Soproni", price: 329, abv:4.5}
+let borsodi = { name: "Borsodi", price: 339, abv: 4.8}
+let pecsi = { name: "Pécsi", price: 379, abv: 4.2}
+
+
+logger(decideIfBeerIsGood(borsodi))
+logger(decideIfBeerIsGood(soproni))
+logger(decideIfBeerIsGood(dreher))
+logger(decideIfBeerIsGood(pecsi))
